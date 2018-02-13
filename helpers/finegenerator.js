@@ -1,0 +1,1 @@
+module.exports = (hari) => hari*3000
