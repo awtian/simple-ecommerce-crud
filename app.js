@@ -11,7 +11,7 @@ const app = express();
 
 // Mongoose setup
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/ecomm');
+mongoose.connect('mongodb://admin:1234@ds247838.mlab.com:47838/yatta');
 
 
 // uncomment after placing your favicon in /public

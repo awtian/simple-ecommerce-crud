@@ -1,11 +1,8 @@
 const mongoose = require('mongoose');
 
 var customerSchema = mongoose.Schema({
-  name : String,
-  memberid : String,
-  address : String,
-  zipcode : String,
-  phone : String
+  username : String,
+  password : String
 })
 
 module.exports = mongoose.model('Customer', customerSchema);

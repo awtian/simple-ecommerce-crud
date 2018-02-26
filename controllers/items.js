@@ -16,6 +16,13 @@ class Controllers {
       .catch(err => res.status(500).send(err))
   }
 
+  static search (req,res) {
+    let query = req.params.query
+    itemModel.find({"title":{ "$regex": query, "$options": "i" }})
+      .then(data => res.send({items: data}))
+      .catch(err => res.status(500).send(err))
+  }
+
   static create (req,res) {
     itemModel.create({
       title : req.body.title,
